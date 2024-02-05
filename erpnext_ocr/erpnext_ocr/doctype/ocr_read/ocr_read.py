@@ -50,6 +50,7 @@ class OCRRead(Document):
         self.read_time = None
         super(OCRRead, self).__init__(*args, **kwargs)
 
+    @frappe.whitelist()
     def read_image(self):
         return read_ocr(self)
 
